@@ -5,4 +5,8 @@ You are not allowed to modify, distribute, or claim this work as your own withou
 Visit https://choosealicense.com/no-permission/ for more information on the license of this project.
 
 
+CURRENT PROJECT STATUS: IN-DEV!!!
+Please note: Source code will not be added to this repo until the project is complete.
+
+
 
