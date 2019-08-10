@@ -17,6 +17,37 @@ public class Main {
 		// Have fun!
 
 		TitleScreenWithTutorial.titleScreenWithTutorial();
+		public static int chance(float... vals) {
+	        float total = 0.0f;
+	        List<Float> prev_vals_list = new ArrayList<>();
+	        List<Float> vals_list = new ArrayList<>();
+	        for (float v : vals) {
+	            prev_vals_list.add(v);
+	            for (int i = 0; i < v; i++) {
+	                vals_list.add(v);
+	            }
+	            total += v;
+	        }
+	        System.out.println(total);
+	        if (100.0f > total) {
+	            for (int i = 0; i < 100.0f - total; i++) {
+	                vals_list.add(100.0f - total);
+	            }
+	            total += 100.0f - total;
+	        }
+	        System.out.println(total);
+	        System.out.println(vals_list);
+	        Random rand = new Random();
+	        int chance = rand.nextInt(vals_list.size());
+	        float temp = vals_list.get(chance);
 
+	        for (int i = 0; i < prev_vals_list.size(); i++) {
+	            if (prev_vals_list.get(i) == temp) {
+	                return i + 1;
+	            }
+	        }
+
+	        return 0;
+	    }
 	}
 }
